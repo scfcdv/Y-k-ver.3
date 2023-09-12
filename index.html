@@ -13,8 +13,7 @@ for (var i = 0; i < data.items.length; i++) {
 var video = data.items[i];
 const thumbnailUrl = video.snippet.thumbnails.medium.url;
 const videoId = video.id;
-var a = `${videoId}`;
-document.getElementById('content').innerHTML += `<a href="javascript:var urld = "https://scfcdv.github.io/Y-k ver.3/#" + a;window.location.href = urld;" target="_blank"><img src="${thumbnailUrl}"></a>`;}
+document.getElementById('content').innerHTML += `<a href="https://scfcdv.github.io/Y-k-ver.3/#${videoId}"><img src="${thumbnailUrl}"></a>`;}
 if (data.nextPageToken) {
 getVideos(data.nextPageToken);}});}
 getVideos();
