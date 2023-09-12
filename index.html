@@ -9,6 +9,15 @@ function asss() {
 location.href = 'https://scfcdv.github.io/Y-k-ver.3';}
 </script>
 <script>
+window.onload = function() {
+setTimeout(function() {
+if(window.location.hash) {
+asssa();}}, 1000);};
+function asssa() {
+document.getElementById('content').style.display = 'none'
+}
+</script>
+<script>
 var apiKey = 'AIzaSyDTFQbG-3GriRafc4V23V5rybT2EFJmVNI';
 function getVideos(pageToken) {
 var url = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=JP&key=' + apiKey;
