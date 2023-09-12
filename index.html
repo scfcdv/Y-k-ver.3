@@ -11,8 +11,8 @@ location.href = 'https://scfcdv.github.io/Y-k-ver.3';}
 <script>
 window.onload = function() {
 setTimeout(function() {
-if(window.location.hash) {
-asssa();}}, 1000);};
+if(window.location.href.indexOf('#') != -1) {
+asssa();}}, 1000);}
 function asssa() {
 document.getElementById('content').style.display = 'none'
 }
