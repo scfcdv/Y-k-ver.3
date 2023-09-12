@@ -1,0 +1,21 @@
+<link rel="icon" href="https://scfcdv.github.io/homeweb2/favicon.ico">
+<title>Youtube var.3</title>
+<div id="content"></div>
+<script>
+var apiKey = 'AIzaSyDTFQbG-3GriRafc4V23V5rybT2EFJmVNI';
+function getVideos(pageToken) {
+var url = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=JP&key=' + apiKey;
+if (pageToken) {url += '&pageToken=' + pageToken;}
+fetch(url)
+.then(response => response.json())
+.then(data => {
+for (var i = 0; i < data.items.length; i++) {
+var video = data.items[i];
+const thumbnailUrl = video.snippet.thumbnails.medium.url;
+const videoId = video.id;
+var a = `${videoId}`;
+document.getElementById('content').innerHTML += `<a href="javascript:var urld = "https://scfcdv.github.io/Y-k ver.3/#" + a;window.location.href = urld;" target="_blank"><img src="${thumbnailUrl}"></a>`;}
+if (data.nextPageToken) {
+getVideos(data.nextPageToken);}});}
+getVideos();
+</script>
