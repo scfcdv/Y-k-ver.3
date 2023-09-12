@@ -21,9 +21,9 @@ var video = data.items[i];
 const thumbnailUrl = video.snippet.thumbnails.medium.url;
 const videoId = video.id;
 function ass(){
+location.href = 'https://scfcdv.github.io/Y-k-ver.3/#${videoId}';
 var hash = location.hash;
 var hash = hash.replace('#', '');
-location.href = 'https://scfcdv.github.io/Y-k-ver.3/#${videoId}';
 }
 document.getElementById('content').innerHTML += `<a><img onclick="ass();" src="${thumbnailUrl}"></a>`;}
 if (data.nextPageToken) {
