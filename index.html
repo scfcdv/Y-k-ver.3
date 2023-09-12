@@ -20,7 +20,10 @@ for (var i = 0; i < data.items.length; i++) {
 var video = data.items[i];
 const thumbnailUrl = video.snippet.thumbnails.medium.url;
 const videoId = video.id;
-function ass(){location.href}
+function ass(){
+var hash = location.hash;
+var hash = hash.replace('#', '');
+}
 document.getElementById('content').innerHTML += `<a href="https://scfcdv.github.io/Y-k-ver.3/#${videoId}"><img onclick="ass();" src="${thumbnailUrl}"></a>`;}
 if (data.nextPageToken) {
 getVideos(data.nextPageToken);}});}
