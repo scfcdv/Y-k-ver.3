@@ -6,7 +6,6 @@ padding: 0;
 border: 0;}
 </style>
 <title>Youtube var.3</title>
-<div id="content"></div>
 <div id="comments"></div>
 <iframe style="visibility: hidden;" src="https://m-39892622.hubspotpagebuilder.com/ja-jp/home" id="k" width="1280" height="720"></iframe>
 <div id="commentSection"></div>
@@ -28,22 +27,7 @@ document.getElementById("k").src = hash2;
 document.getElementById('content').style.display = 'none'
 document.getElementById('k').style.visibility = 'visible'
 var apiKey = 'AIzaSyBL3JHDYH_36QjEmRxpkQ1jmDFnohFTjbI';
-var hash3 = location.hash;
-var hash3 = hash3.replace('#', '');
-var hash3 = hash3.replace('video-https://www.youtube.com/embed/', '');
-var apiUrl = 'https://www.googleapis.com/youtube/v3/commentThreads?key=' + apiKey +
-'&videoId=' + hash3 + '&part=snippet';
-$.get(apiUrl, function(data) {
-var commentSection = document.getElementById('commentSection');
-commentSection.innerHTML = '';
-for (var i = 0; i < data.items.length; i++) {
-var comment = data.items[i].snippet.topLevelComment.snippet;
-var commentText = comment.textDisplay;
-var commentAuthor = comment.authorDisplayName;
-var commentItem = document.createElement('div');
-commentItem.innerHTML = '<strong>' + commentAuthor + '</strong>: ' + commentText;
-commentSection.appendChild(commentItem);}});
-}
+};
 </script>
 <script>
 window.onload = function() {setInterval(sssaaa, 100);}
