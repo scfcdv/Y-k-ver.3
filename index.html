@@ -4,12 +4,20 @@
 <div id="content"></div>
 <iframe style="visibility: hidden;" src="https://m-39892622.hubspotpagebuilder.com/ja-jp/home" id="k" width="1280" height="720"></iframe>
 <script>
-window.onload = function() {setInterval(asssa, 1000);}
+window.onload = function() {setInterval(asssa, 100);}
 function asssa() {
 if(window.location.href.indexOf('#') > -1) {asssa2();}}
 function asssa2() {
+var hash = location.hash;
+var hash = hash.replace('#', '');
+document.getElementById("k").src = hash;
 document.getElementById('content').style.display = 'none'
 document.getElementById('k').style.visibility = 'visible'}
+</script>
+<script>
+window.onload = function() {setInterval(sssaaa, 100);}
+sssaaa() {if(!window.location.href.includes('#')) {asssaa2();}}
+function asssaa2(){document.getElementById('k').style.visibility = 'hidden'}
 </script>
 <script>
 var apiKey = 'AIzaSyDTFQbG-3GriRafc4V23V5rybT2EFJmVNI';
