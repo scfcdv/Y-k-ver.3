@@ -8,8 +8,10 @@ window.onload = function() {setInterval(asssa, 100);}
 function asssa() {
 if(window.location.href.indexOf('#') > -1) {asssa2();}}
 function asssa2() {
+location.href = 'https://scfcdv.github.io/Y-k-ver.3/#video-${videoId}';
 var hash = location.hash;
 var hash = hash.replace('#', '');
+var hash = "https://www.youtube.com/embed/" + hash;
 document.getElementById("k").src = hash;
 document.getElementById('content').style.display = 'none'
 document.getElementById('k').style.visibility = 'visible'}
