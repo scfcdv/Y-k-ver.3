@@ -27,6 +27,8 @@ document.getElementById("k").src = hash2;
 document.getElementById('content').style.display = 'none'
 document.getElementById('k').style.visibility = 'visible'
 var apiKey = 'AIzaSyDTFQbG-3GriRafc4V23V5rybT2EFJmVNI';
+var hash = location.hash;
+var hash = hash.replace('#', '');
 var apiUrl = 'https://www.googleapis.com/youtube/v3/commentThreads?key=' + apiKey +
 '&videoId=' + hash + '&part=snippet';
 $.get(apiUrl, function(data) {
