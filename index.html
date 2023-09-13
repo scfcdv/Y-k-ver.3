@@ -4,9 +4,11 @@
 <div id="content"></div>
 <iframe style="visibility: hidden;" src="https://m-39892622.hubspotpagebuilder.com/ja-jp/home" id="k" width="1280" height="720"></iframe>
 <script>
-window.onload = function() {setInterval(asssa, 100);}
+window.onload = function() {setInterval(asssa, 10);}
 function asssa() {
-if(window.location.href.indexOf('#') > -1) {asssa2();}}
+if(window.location.href.indexOf('#') > -1) {
+if (!window.location.href.includes('video')) {
+asssa2();}}}
 function asssa2() {
 var hash = location.hash;
 var hash = hash.replace('#', '');
