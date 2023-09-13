@@ -7,6 +7,7 @@ border: 0;}
 </style>
 <title>Youtube var.3</title>
 <div id="content"></div>
+<div id="comments"></div>
 <iframe style="visibility: hidden;" src="https://m-39892622.hubspotpagebuilder.com/ja-jp/home" id="k" width="1280" height="720"></iframe>
 <div id="commentSection"></div>
 <script>
@@ -50,7 +51,6 @@ sssaaa() {if(!window.location.href.includes('#')) {asssaa2();}}
 function asssaa2(){document.getElementById('k').style.visibility = 'hidden'}
 </script>
 <script>
-var apiKey = 'AIzaSyDTFQbG-3GriRafc4V23V5rybT2EFJmVNI';
 function getVideos(pageToken) {
 var url = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=JP&key=' + apiKey;
 if (pageToken) {url += '&pageToken=' + pageToken;}
