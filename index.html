@@ -3,11 +3,13 @@
 <title>Youtube var.3</title>
 <div id="content"></div>
 <iframe style="visibility: hidden;" src="https://m-39892622.hubspotpagebuilder.com/ja-jp/home" id="k" width="1280" height="720"></iframe>
+<div id="commentSection"></div>
 <script>
 window.onload = function() {if(window.location.href.includes('video')) {location.href = 'https://scfcdv.github.io/Y-k-ver.3/'}};
 </script>
 <script>
-window.onload = function() {setInterval(asssa, 10);}
+window.onload = function() {setInterval(asssa, 1);}
+window.onload = function() {setInterval(asssa21, 1);}
 function asssa() {
 if(window.location.href.indexOf('#') > -1) {
 if (!window.location.href.includes('video')) {
@@ -15,11 +17,25 @@ asssa2();}}}
 function asssa2() {
 var hash = location.hash;
 var hash = hash.replace('#', '');
-var hash = "https://www.youtube.com/embed/" + hash;
-location.href = "https://scfcdv.github.io/Y-k-ver.3/#video-" + hash;
-document.getElementById("k").src = hash;
+var hash2 = "https://www.youtube.com/embed/" + hash;
+location.href = "https://scfcdv.github.io/Y-k-ver.3/#video-" + hash2;
+document.getElementById("k").src = hash2;
 document.getElementById('content').style.display = 'none'
-document.getElementById('k').style.visibility = 'visible'}
+document.getElementById('k').style.visibility = 'visible'
+var videoId = hash;
+var apiUrl = 'https://www.googleapis.com/youtube/v3/commentThreads?key=' + apiKey +
+'&videoId=' + videoId + '&part=snippet';
+$.get(apiUrl, function(data) {
+var commentSection = document.getElementById('commentSection');
+commentSection.innerHTML = '';
+for (var i = 0; i < data.items.length; i++) {
+var comment = data.items[i].snippet.topLevelComment.snippet;
+var commentText = comment.textDisplay;
+var commentAuthor = comment.authorDisplayName;
+var commentItem = document.createElement('div');
+commentItem.innerHTML = '<strong>' + commentAuthor + '</strong>: ' + commentText;
+commentSection.appendChild(commentItem);}});
+}
 </script>
 <script>
 window.onload = function() {setInterval(sssaaa, 100);}
