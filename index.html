@@ -28,8 +28,8 @@ document.getElementById('content').style.display = 'none'
 document.getElementById('k').style.visibility = 'visible'
 var apiKey = 'AIzaSyDTFQbG-3GriRafc4V23V5rybT2EFJmVNI';
 var hash3 = location.hash;
-var hash3 = hash.replace('#', '');
-var hash3 = hash.replace('video-https://www.youtube.com/embed/', '');
+var hash3 = hash3.replace('#', '');
+var hash3 = hash3.replace('video-https://www.youtube.com/embed/', '');
 var apiUrl = 'https://www.googleapis.com/youtube/v3/commentThreads?key=' + apiKey +
 '&videoId=' + hash3 + '&part=snippet';
 $.get(apiUrl, function(data) {
